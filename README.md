@@ -1,2 +1,3 @@
-# tex.templates
-Templates
+# Templates `.tex`
+
+Templates para textos e apresentações.
