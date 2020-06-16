@@ -35,6 +35,11 @@
 	
 \usepackage[brazil]{babel}
 
+\usepackage{tikz}
+% tkiz ball item
+%https://tex.stackexchange.com/questions/72813/writing-inside-a-ball-in-a-itemize-enumerate-in-beamer
+\newcommand*\ball{\tikz \shade[ball color=main] (0,0) circle (3pt);}
+
 \usepackage{enumitem}
   \setlist{itemsep= -\parskip, itemindent=1em, noitemsep, topsep=-\parskip}
   \setlist[itemize,2]{label=--} 
