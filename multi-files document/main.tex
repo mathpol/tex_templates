@@ -43,11 +43,16 @@
 %https://tex.stackexchange.com/questions/72813/writing-inside-a-ball-in-a-itemize-enumerate-in-beamer
 \newcommand*\ball{\tikz \shade[ball color=main] (0,0) circle (3pt);}
 
+\newcommand*\itemcircle[1]{\tikz[baseline=(char.base)]{%
+		\node[shape=circle,fill=main,color=main,draw,inner sep=2pt] (char) {\color{white}#1};}}
+		
 \usepackage{enumitem}
   \setlist{itemsep= -\parskip, itemindent=1em, noitemsep, topsep=-\parskip, after=\vspace{\baselineskip}}
+  \setlist[itemize,1]{label=\ball} 
   \setlist[itemize,2]{label=--} 
-  \setlist[enumerate,1]{label=[\arabic*]}
-
+  %\setlist[enumerate,1]{label=[\arabic*]}
+  \setlist[enumerate,1]{label=\protect\itemcircle{\arabic*}}
+  
 \usepackage[brazil]{babel}
 
 \usepackage{setspace} %Line spacing
