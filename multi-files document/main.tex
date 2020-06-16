@@ -41,7 +41,7 @@
 \newcommand*\ball{\tikz \shade[ball color=main] (0,0) circle (3pt);}
 
 \usepackage{enumitem}
-  \setlist{itemsep= -\parskip, itemindent=1em, noitemsep, topsep=-\parskip}
+  \setlist{itemsep= -\parskip, itemindent=1em, noitemsep, topsep=-\parskip, after=\vspace{\baselineskip}}
   \setlist[itemize,2]{label=--} 
   \setlist[enumerate,1]{label=[\arabic*]}
 
@@ -94,9 +94,12 @@
 
 
 \begin{document}
-	
+
+\setcounter{tocdepth}{1}	
 \pagenumbering{roman}
 \tableofcontents
+
+\newpage
 
 \pagenumbering{arabic}
 \maketitle
@@ -111,7 +114,8 @@
 \setlength{\parindent}{1em} %Tamanho do recuo do parágrafo
 \setlength{\parskip}{1em} %Espaçamento entre as linhas
 
-
-\subfile{tex.files/subfile}
+%subfiles
+\subfile{tex.files/subfile_1}
+\subfile{tex.files/subfile_2}
 
 \end{document}
