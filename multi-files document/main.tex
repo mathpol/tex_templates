@@ -43,8 +43,12 @@
 %https://tex.stackexchange.com/questions/72813/writing-inside-a-ball-in-a-itemize-enumerate-in-beamer
 \newcommand*\ball{\tikz \shade[ball color=main] (0,0) circle (3pt);}
 
-\newcommand*\itemcircle[1]{\tikz[baseline=(char.base)]{%
-		\node[shape=circle,fill=main,color=main,draw,inner sep=2pt] (char) {\color{white}#1};}}
+%https://tex.stackexchange.com/questions/228364/is-it-possible-to-set-a-maximum-node-width-in-tikz
+\newcommand*\itemcircle[1]{
+	\begin{tikzpicture}
+		\tikzstyle{enum}=[circle,fill=main,color=main, inner sep=4pt]
+		\node[enum, label=center:\color{white}#1] () at (0,0) {};
+	\end{tikzpicture}}
 		
 \usepackage{enumitem}
   \setlist{itemsep= -\parskip, itemindent=1em, noitemsep, topsep=-\parskip, after=\vspace{\baselineskip}}
