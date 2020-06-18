@@ -45,7 +45,7 @@
 
 %https://tex.stackexchange.com/questions/228364/is-it-possible-to-set-a-maximum-node-width-in-tikz
 \newcommand*\itemcircle[1]{
-	\begin{tikzpicture}
+	\begin{tikzpicture}[baseline = -3pt]
 		\tikzstyle{enum}=[circle,fill=main,color=main, inner sep=4pt]
 		\node[enum, label=center:\color{white}#1] () at (0,0) {};
 	\end{tikzpicture}}
