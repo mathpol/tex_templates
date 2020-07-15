@@ -42,6 +42,7 @@
 	%\definecolor{main}{rgb}{0.0, 0.5, 1.0}
         \definecolor{page}{RGB}{251,240, 217}
 	\definecolor{text}{RGB}{95,75, 50}
+	\definecolor{frame}{HTML}{333333}
 	
 \usepackage[brazil]{babel}
 
@@ -103,6 +104,24 @@
 }
 
 \usepackage{footnotebackref}
+
+\usepackage[framemethod=tikz]{mdframed}
+
+\mdfdefinestyle{results}{%
+	linecolor=main,
+	fontcolor = frame,
+	outerlinewidth=0.5pt,
+	frametitlebackgroundcolor=black!20,
+	frametitlealignment=\raggedright,
+	roundcorner=0pt,
+	innertopmargin=0.5\baselineskip,
+	innerbottommargin=0.5\baselineskip,
+	innerrightmargin=1em,
+	innerleftmargin=1em,
+	backgroundcolor=gray!20!white}
+
+\usepackage{tcolorbox}
+\newtcbox{\boxfit}[1][]{nobeforeafter,tcbox raise base, arc=0pt, outer arc=0pt, colback=frame!10!white, colframe=frame!50!black, boxsep=0pt,left=2pt,right=2pt,top=2pt,bottom=2pt,boxrule=1pt,#1}
 
 \title{{\footnotesize DCP-UFMG} \\ \Huge \bfseries Título}
 
